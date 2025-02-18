@@ -74,7 +74,7 @@ function showStarInfo(starType) {
         let img = document.createElement("img");
         img.src = imageData.src;
         img.alt = star.title;
-        img.width = 300;
+        img.width = 800;
 
         let credit = document.createElement("p");
         credit.innerHTML = `<small>Image Source: <a href="${imageData.source}" target="_blank">${imageData.source}</a></small>`;
