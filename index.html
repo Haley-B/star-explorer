@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Types Explorer</title>
+    <script src="whoDatStar.js" defer></script>
+</head>
+<body style="background-color: black; color: white;">
+
+    <h1 style="text-align: center;">🌟 Star Types Explorer 🌟</h1>
+
+    <!-- Informative Image (NOT Clickable) -->
+    <div style="text-align: center;">
+        <h3>Star Classification Diagram</h3>
+        <img src="images/main_Class.png" alt="Star Classification Diagram" width="800">
+        <p style="font-size: small;">
+            Image Source: <a href="https://www.universetoday.com/24629/life-cycle-of-stars/" target="_blank">https://www.universetoday.com/24629/life-cycle-of-stars/</a>
+        </p>
+    </div>
+
+    <div style="text-align: center;">
+        <h3>Star Life Cycle Diagram</h3>
+        <img src="images/main_Life.png" alt="Star Life Cycle Diagram" width="800">
+        <p style="font-size: small;">
+            Image Source: <a href="https://blogs.egu.eu/divisions/gd/2021/07/07/brown-dwarfs-cloudy-with-a-chance-of-earths-mantle/" target="_blank">https://blogs.egu.eu/divisions/gd/2021/07/07/brown-dwarfs-cloudy-with-a-chance-of-earths-mantle/</a>
+        </p>
+    </div>
+
+    <!-- General Overview Section -->
+    <h2>Understanding Star Types</h2>
+    <p>Stars are classified based on their temperature, luminosity, and size. Below is an overview of different types of stars:</p>
+    
+
+
+    <h3>Star Type Overview</h3>
+    <table border="1">
+        <tr>
+            <th>Star Type</th>
+            <th>Temperature (K)</th>
+            <th>Size</th>
+            <th>LifeSpan</th>
+            <th>Example Star</th>
+        </tr>
+        <tr>
+            <td>Brown Dwarf</td>
+            <td>&lt; 2000</td>
+            <td>Sub-stellar</td>
+            <td>They never "die" since they aren't technically stars, but instead cool/fade over an extremely long period of time (billions of years)</td>
+            <td>WISE 0855−0714</td>
+        </tr>
+        <tr>
+            <td>Red Dwarf</td>
+            <td>2500 - 4000</td>
+            <td>Small</td>
+            <td>Billions to trillions of years depending on solar mass, making them the longest lived star type</td>
+            <td>Proxima Centauri</td>
+        </tr>
+        <tr>
+            <td>Main Sequence</td>
+            <td>4000 - 10,000</td>
+            <td>Medium</td>
+            <td>Average of ~10 billion years (such as our sun), but this also depends on solar mass</td>
+            <td>Sun</td>
+        </tr>
+        <tr>
+            <td>White Dwarf</td>
+            <td>10,000 - 100,000</td>
+            <td>Small</td>
+            <td>These are remnants of low/medium mass stars and will gradually cool for billions to quadrillions of years before becoming a black dwarf (note a black dwarf has never been observed, showing how long "lived" these are)</td>
+            <td>Sirius B</td>
+        </tr>
+        <tr>
+            <td>Supergiant</td>
+            <td>3,500 - 40,000</td>
+            <td>Huge</td>
+            <td>Approximately 5 to 20 million years before ending their lives in supernova explosions</td>
+            <td>Betelgeuse</td>
+        </tr>
+        <tr>
+            <td>Hypergiant</td>
+            <td>3,000 - 50,000</td>
+            <td>Enormous</td>
+            <td>Approximately 1 to 2 million years before ending their lives in supernova explosions</td>
+            <td>VY Canis Majoris</td>
+        </tr>
+    </table>
+
+    <h2>Click a Star Type to Learn More</h2>
+
+    <!-- Clickable Star Images -->
+    <div id="starGallery">
+        <div>
+            <img src="images/main_Brown.png" alt="Brown Dwarf" onclick="showStarInfo('brown_dwarf')" width="200" height="200">
+            <p>Brown Dwarf</p>
+        </div>
+        <div>
+            <img src="images/main_Red.png" alt="Red Dwarf" onclick="showStarInfo('red_dwarf')" width="200" height="200">
+            <p>Red Dwarf</p>
+        </div>
+        <div>
+            <img src="images/main_Main.png" alt="Main Sequence" onclick="showStarInfo('main_sequence')" width="200" height="200">
+            <p>Main Sequence</p>
+        </div>
+        <div>
+            <img src="images/main_White.png" alt="White Dwarf" onclick="showStarInfo('white_dwarf')" width="200" height="200">
+            <p>White Dwarf</p>
+        </div>
+        <div>
+            <img src="images/main_Super.png" alt="Supergiant" onclick="showStarInfo('supergiant')" width="200" height="200">
+            <p>Supergiant</p>
+        </div>
+        <div>
+            <img src="images/main_Hyper.png" alt="Hypergiant" onclick="showStarInfo('hypergiant')" width="200" height="200">
+            <p>Hypergiant</p>
+        </div>
+    </div>
+
+    <!-- Section to Display Star Info (Initially Hidden) -->
+    <div id="starInfo" style="display: none;">
+        <h2 id="starTitle"></h2>
+        <p id="starDescription"></p>
+        <div id="extraImages"></div>
+        <button onclick="hideStarInfo()">Back to Main Page</button>
+    </div>
+
+</body>
+</html>
+
